@@ -16,14 +16,14 @@
 		WHERE agent_id = #{agentId}
   	</select> 
     
-    <!-- 
- 	<resultMap id="resultMap1" ... >
-  	
-  	
-  	</resultMap>
- 	-->
- 	
- 	<select id="selectArtistsByAgentName" parameterType="string" resultMap="resultMap1">
+	    <!-- 
+	 	<resultMap id="resultMap1" ... >
+	  	
+	  	
+	  	</resultMap>
+	 	-->
+	 	
+	 	<select id="selectArtistsByAgentName" parameterType="string" resultMap="resultMap1">
     	SELECT ...
     	FROM ...
     	WHERE ...   #{agentName}  ...

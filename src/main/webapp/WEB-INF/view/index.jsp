@@ -22,20 +22,14 @@ function search() {
 		genre: form.genre.value, 
 		debutYear: form.debutYear.value
 	} 	
-	var jsonStr = JSON.stringify(condition)
-	alert("search condition: " + jsonStr);
+	
+	/* 위 condition 객체를 JSON 문자열로 변환함 */
 	
 	$.ajax({			
-		type: "POST",
-		url: "search3", 
-		contentType: "application/json",
-		data: jsonStr,
-		success: function(responseJson){	
-			$("#result").text(JSON.stringify(responseJson))	
-	  	},
-		error: function(){
-			alert("ERROR", arguments);
-		}
+		/* 변환된 JSON 문자열을 POST 방식의 Ajax 요청으로 전송함 (url은 "search3") */		
+		/* JSON 문자열 형식의 결과가 return되면 그 내용을 이 페이지 하단의 <div> 엘리먼트의 내용으로 출력함 */
+		
+		
 	});
 }
 </script>
