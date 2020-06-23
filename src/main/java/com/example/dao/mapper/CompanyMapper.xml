@@ -14,7 +14,14 @@
 		WHERE name = #{companyName}
   	</select> 
   
- 	<select id="selectCompanyWithArtists" parameterType="string" resultType="Company">
+ 	<!-- 
+ 	<resultMap id="resultMap2" ... >
+  	
+  	
+  	</resultMap>
+ 	-->
+ 	
+ 	<select id="selectCompanyWithArtists" parameterType="string" resultMap="resultMap2">
     	SELECT ...
     	FROM ...
     	WHERE ...   #{companyName}  ...

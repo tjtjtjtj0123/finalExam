@@ -63,18 +63,11 @@ public class ArtistController {
 	}
 	
 	@RequestMapping(value="/search3", method=RequestMethod.POST)
-	@ResponseBody 
-	public List<Artist> searchArtistsByCondition(@RequestBody Map<String, String> condition, HttpServletResponse resp) {
-		System.out.println(condition);
-		
-		List<Artist> list = artService.getArtistsByCondition(condition);
-		if (list == null) {
-			try {
-				resp.sendError(HttpServletResponse.SC_NOT_FOUND);
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
+	public List<Artist> searchArtistsByCondition(/* ... 파라미터 정의 ... */) {
+		List<Artist> list = null; 
+		/* 
+		 * ... 본문 코드 정의 ...
+		 */
 		return list;
 	}
 }

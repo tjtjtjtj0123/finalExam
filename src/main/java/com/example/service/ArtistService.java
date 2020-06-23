@@ -16,7 +16,6 @@ import com.example.model.Company;
 public class ArtistService {
 	@Autowired
 	private ArtistDao artistDao;
-//	private ArtistMapperDao artistDao;
 	
 	@Autowired
 	private CompanyDao companyDao;
@@ -37,7 +36,6 @@ public class ArtistService {
 			list.get(i).setAgent(company);
 		}
 		return list;
-		// return artistDao.findArtistsByAgentName(name);
 	}
 	
 	public Company getAgentWithArtists(String agentName) {
@@ -46,7 +44,6 @@ public class ArtistService {
 		List<Artist> list = artistDao.findArtistsByAgentId(company.getId());
 		company.setArtists(list); 
 		return company;
-		// return companyDao.findCompanyWithArtists(agentName);
 	}
 
 	public List<Artist> getArtistsByCondition(Map<String, String> condition) {
