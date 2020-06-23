@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.dao.mapper.ArtistMapper">	
+ 
+	<select id="selectArtistById" parameterType="int" resultType="Artist">
+    	SELECT id, name, debut_year AS debutYear, genre, members, agent_id AS agentId
+		FROM ARTIST
+		WHERE id = #{artistId}
+  	</select> 
+  
+ 	<select id="selectArtistsByAgentId" parameterType="int" resultType="Artist">
+    	SELECT id, name, debut_year AS debutYear, genre, members, agent_id AS agentId
+		FROM ARTIST
+		WHERE agent_id = #{agentId}
+  	</select> 
+  
+ 	<select id="selectArtistsByAgentName" parameterType="string" resultType="Artist">
+    	SELECT ...
+    	FROM ...
+    	WHERE ...   #{agentName}  ...
+  	</select> 
+  
+  
+  	<select id="selectArtistsByCondition" parameterType="map" resultType="Artist">
+    	SELECT id, name, debut_year AS debutYear, genre, members, agent_id AS agentId
+		FROM ARTIST
+		<where>
+			<if test="name != null and !name.equals('')">
+				AND name = #{name}
+			</if>
+			<if test="debutYear != null and !debutYear.equals('')">
+				AND debut_year = #{debutYear}
+			</if>
+			<if test="genre != null and !genre.equals('')">
+				<bind name="pattern" value="'%' + _parameter.get('genre') + '%'" />
+				AND genre LIKE #{pattern}
+			</if>
+		</where>
+	</select>
+  
+  <!--
+  <insert id="insertComment" parameterType="Comment">
+    INSERT INTO COMMENTS(comment_no, user_id, comment_content, reg_date)
+		VALUES (#{commentNo}, #{userId}, #{commentContent}, #{regDate})
+  </insert>
+   -->
+</mapper>
