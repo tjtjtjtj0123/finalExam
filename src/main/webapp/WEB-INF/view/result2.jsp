@@ -13,7 +13,7 @@ table, th, td {
 </style>
 </head>
 <body>
-<h1>문제 #2</h1>
+<h1>문제 #3</h1>
 
 <h2>기획사</h2>
 <ul>

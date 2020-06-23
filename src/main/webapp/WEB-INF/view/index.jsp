@@ -41,7 +41,7 @@ function search() {
 </script>
 </head>
 <body>
-<h1>문제 #1</h1>
+<h1>문제 #2</h1>
 <h2>기획사</h2>
 <ul>
 <c:forEach var="name" items="${companies}" varStatus="status">
@@ -51,7 +51,7 @@ function search() {
 <br/>
 <hr>
 
-<h1>문제 #2</h1>
+<h1>문제 #3</h1>
 <h2>기획사</h2>
 <ul>
 <c:forEach var="name" items="${companies}" varStatus="status">
@@ -61,7 +61,7 @@ function search() {
 <br/>
 <hr>
 
-<h1>문제 #3</h1>
+<h1>문제 #4</h1>
 <h2>아티스트 검색</h2>
 <form id="form1">
 	이름: <input type="text" id="name" name="name"/>&nbsp;

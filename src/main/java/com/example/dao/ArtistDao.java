@@ -31,11 +31,4 @@ public class ArtistDao {
 	public List<Artist> findArtistsByCondition(Map<String, String> condition) {
 		return sqlSession.selectList(namespace + ".selectArtistsByCondition", condition);
 	}
-
-	/*
-	public Integer insertArtist(Artist artist) {
-		int result = sqlSession.insert(namespace + ".insertArtist", artist);
-		return result;
-	}
-	*/
 }

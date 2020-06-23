@@ -40,16 +40,4 @@
 
 	<tx:annotation-driven transaction-manager="transactionManager" />
 
-
-
-	<!-- MyBatis MapperScannerConfigurer 설정: 
-      Mapper interface scan 및 mapper bean 자동 생성 -->
-	<!-- 
-	<bean id="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.example.dao.mapper"/>
-	</bean>
-  	--> 
-  	<!-- 또는 아래와 같이 설정 가능 -->
-  	<mybatis:scan base-package="com.example.dao.mapper"/> 
-  
 </beans>
