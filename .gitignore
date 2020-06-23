@@ -92,6 +92,7 @@ local.properties
 *.nar
 *.ear
 *.zip
+!finalExam.zip
 *.tar.gz
 *.rar
 
