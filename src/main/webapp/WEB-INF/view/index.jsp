@@ -35,6 +35,8 @@ function search() {
 </script>
 </head>
 <body>
+이 프로젝트를 다운로드 받고 싶으면 <a href="finalExam.zip">이 링크</a>를 클릭하세요.
+<br>
 <h1>문제 #2</h1>
 <h2>기획사</h2>
 <ul>
